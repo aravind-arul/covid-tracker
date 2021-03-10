@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vaccine</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel='stylesheet' href='/stylesheets/vaccine.css'>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div class='bground'>
+            <div class="d-flex text-center text-white bgcol mainhead">
+                <div class="cover-container d-flex w-100 mx-auto h-100 p-3 flex-column">
+                    <header class="mb-auto heading">
+                        <div>
+                            <h3 class="float-md-left mb-0">Covid-19 Live-Tracker</h3>
+                            <nav class="nav nav-masthead justify-content-center float-md-right">
+                                <a class="nav-link" href="/home">Home</a>
+                                <a class="nav-link" href="/maptrack">Map Tracking</a>
+                                <a class="nav-link" href="/casetrack">Statistics</a>
+                                <a class="nav-link" href="/news">News</a>
+                                <a class="nav-link active" aria-current="page" href="#">Vaccine</a>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+
+            <h1 class="display-4 text-center mb-3 text-light mainhead">Vaccine Information</h1>
+            <div class="flex w-100">
+                <div class="row m-0">
+                    <div class="nav flex-row justify-content-center nav-pills" id="categories" role="tablist">
+                        <button class="btn btn-outline-light active contbtn" id="alltab" data-bs-toggle="pill"
+                            data-bs-target="#all" type="button" role="tab">All Vaccines</button>
+                        <button class="btn btn-outline-light contbtn" id="phase1tab" data-bs-toggle="pill"
+                            data-bs-target="#phase1" type="button" role="tab">Phase-1</button>
+                        <button class="btn btn-outline-light contbtn" id="phase2tab" data-bs-toggle="pill"
+                            data-bs-target="#phase2" type="button" role="tab">Phase-2</button>
+                        <button class="btn btn-outline-light contbtn" id="phase3tab" data-bs-toggle="pill"
+                            data-bs-target="#phase3" type="button" role="tab">Phase-3</button>
+                        <button class="btn btn-outline-light contbtn" id="phase4tab" data-bs-toggle="pill"
+                            data-bs-target="#phase4" type="button" role="tab">Phase-4</button>
+                        <button class="btn btn-outline-light contbtn" id="mainvaccine" data-bs-toggle="pill"
+                            data-bs-target="#mainvac" type="button" role="tab">Vaccines-In-Use</button>
+                    </div>
+                    <div class="container p-3 px-5 text-light">
+                        <div class='scrolling' id="style-1">
+                            <div class="tab-content" id="content">
+                                <div class='tab-pane fade' id='mainvac' role='tabpanel'>
+                                    <div class="row">
+                                        <h2 class='display-5 mainhead text-center offset-1 head1'>Details Of Some Of The
+                                            Distributed
+                                            Vaccines</h2>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex row vacbox">
+                                        <div class="nav flex-column nav-pills me-3 pt-5 offset-1 col-1" id="vaccinename"
+                                            role="tablist">
+                                            <button class="btn btn-outline-light active" id="pfizertab"
+                                                data-bs-toggle="pill" data-bs-target="#pfizer" type="button"
+                                                role="tab">Pfizer</button>
+                                            <button class="btn btn-outline-light" id="sinopharmtab"
+                                                data-bs-toggle="pill" data-bs-target="#sinopharm" type="button"
+                                                role="tab">Sinopharm
+                                            </button>
+                                            <button class="btn btn-outline-light" id="oxfordtab" data-bs-toggle="pill"
+                                                data-bs-target="#oxford" type="button" role="tab">Oxford</button>
+                                            <button class="btn btn-outline-light" id="covaxtab" data-bs-toggle="pill"
+                                                data-bs-target="#covax" type="button" role="tab">Covaxin</button>
+                                        </div>
+                                        <div class="tab-content col-10" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active text-center" id="pfizer"
+                                                role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                                <h3 class='display-5 text-center mainhead'>Pfizer-BioNTech </h3>
+                                                <h4 class='display-6 text-center'></h4>
+
+                                                <p class="lead text-center px-3 subhead">
+                                                    Type of vaccine: mRNA<br>
+                                                    Vaccine MUST be mixed with diluent before
+                                                    administration.<br>
+                                                    Multidose vial: Up to 6 doses per vial<br>
+                                                    Dosage: 0.3 mL<br>
+
+                                                    Diluent: 0.9% sodium chloride (normal
+                                                    saline, preservative-free)<br>
+
+                                                    Age Indications:
+                                                    16 years of age and older<br>
+
+                                                    Schedule:
+                                                    2-dose series separated by 21 days.<br>
+                                                    A series started with COVID-19 vaccine (Pfizer) should be completed
+                                                    with this product.<br>
+
+                                                    Administer:
+                                                    Intramuscular (IM) injection in the deltoid muscle.<br>
+                                                    Based on evidence from clinical trials, the Pfizer-BioNTech vaccine
+                                                    was 95% effective at preventing laboratory-confirmed COVID-19
+                                                    illness in people without evidence of previous infection.<br>
+                                                    In clinical trials, reactogenicity symptoms (side effects that
+                                                    happen within 7 days of getting vaccinated) were common but were
+                                                    mostly mild to moderate.<br>
+                                                    Side effects (such as fever, chills, tiredness, and headache)
+                                                    throughout the body were more common after the second dose of the
+                                                    vaccine.<br>
+                                                    Most side effects were mild to moderate. However, a small number of
+                                                    people had severe side effects—defined as side effects affecting a
+                                                    person’s ability to do daily activities.<br>
+                                                    <a href='https://www.pfizer.com/' target="_blank"
+                                                        rel="noopener noreferrer" class='btn btn-dark'>For More
+                                                        Information</a>
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane fade" id="sinopharm" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab">
+                                                <h3 class='display-5 text-center mainhead'>Sinopharm</h3>
+                                                <h4 class='display-6 text-center'></h4>
+
+                                                <p class="lead text-center subhead">
+                                                    One of the two inactivated virus COVID-19 vaccines developed by
+                                                    Sinopharm.<br>
+                                                    Developed by scientists at China’s state-owned pharmaceutical
+                                                    enterprise, the vaccine follows the tried-and-tested route of
+                                                    training the body’s immune system to detect and destroy viruses
+                                                    using injections of deactivated virus<br>
+                                                    On December 9, the UAE announced interim results from Phase III
+                                                    trials showing BBIBP-CorV had a 86% efficacy against COVID-19
+                                                    infection.<br>
+                                                    In late December, Sinopharm announced that its
+                                                    internal analysis indicated a 79% efficacy.<br> While mRNA vaccines
+                                                    like the Pfizer–BioNTech COVID-19 vaccine and mRNA-1273 showed
+                                                    higher efficacy of +90%, those present distribution challenges for
+                                                    some nations as they require deep-freeze facilities and trucks.
+                                                    BIBP-CorV could be transported and stored at normal refrigerated
+                                                    temperatures.<br>
+                                                    By the end of 2020, it was in Phase III trials in
+                                                    Argentina, Bahrain, Egypt, Morocco, Pakistan, Peru, and the
+                                                    United
+                                                    Arab Emirates (UAE) with over 60,000 participants.<br>
+                                                    Vaccinated through injection into a muscle – usually in the
+                                                    upper
+                                                    arm. Because the
+                                                    virus has been deactivated, the body’s response is relatively
+                                                    weak,
+                                                    so two injections are needed over 28 days.<br>
+                                                    As of February 21, more than 43 million doses of the vaccine had
+                                                    been administered in total.<br>
+                                                    <a href='http://www.sinopharm.com/1156.html' target="_blank"
+                                                        rel="noopener noreferrer" class='btn btn-dark'>For More
+                                                        Information</a>
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane fade" id="oxford" role="tabpanel"
+                                                aria-labelledby="v-pills-messages-tab">
+                                                <h3 class='display-5 text-center mainhead'>Oxford AstraZeneca</h3>
+                                                <h4 class='display-6 text-center'></h4>
+
+                                                <p class="lead text-center px-3 subhead">
+                                                    It is made from a weakened version of a common cold virus (known as
+                                                    an adenovirus) from chimpanzees. It has been modified to look more
+                                                    like coronavirus - although it can't cause illness.<br>
+                                                    Once injected, it teaches the body's immune system how to fight the
+                                                    real virus, should it need to.<br>
+                                                    The recommended dosage is two doses given intramuscularly (0.5ml
+                                                    each) with an interval of 8 to 12 weeks. <br>
+
+                                                    The EMA has thoroughly assessed the data on the quality, safety and
+                                                    efficacy of the vaccine and has recommended granting a conditional
+                                                    marketing authorisation for people aged 18 and above.<br>
+
+                                                    Research has shown it is highly effective. No one given the vaccine
+                                                    in trials developed severe Covid or needed hospital treatment.<br>
+
+                                                    Unlike Pfizer's jab - which has to be kept at an extremely cold
+                                                    temperature (-70&degC) - the Oxford vaccine can be stored in a
+                                                    normal
+                                                    fridge. This makes it much easier to distribute.<br>
+                                                    People with a history of severe allergic reaction to any component
+                                                    of the vaccine should not take it.<br>
+
+                                                    The vaccine is not recommended for persons younger than 18 years of
+                                                    age pending the results of further studies.<br>
+                                                    <a href='https://www.astrazeneca.com/' target="_blank"
+                                                        rel="noopener noreferrer" class='btn btn-dark'>For More
+                                                        Information</a>
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane fade" id="covax" role="tabpanel"
+                                                aria-labelledby="v-pills-settings-tab">
+                                                <h3 class='display-5 text-center mainhead'>Covaxin</h3>
+                                                <h4 class='display-6 text-center'></h4>
+
+                                                <p class="lead text-center px-3 subhead">
+                                                    COVAXIN®, India's indigenous COVID-19 vaccine by Bharat Biotech is
+                                                    developed in collaboration with the Indian Council of Medical
+                                                    Research (ICMR) - National Institute of Virology (NIV).<br>
+                                                    The vaccine is developed using Whole-Virion Inactivated Vero Cell
+                                                    derived platform technology. Inactivated vaccines do not replicate
+                                                    and are therefore unlikely to revert and cause pathological effects.
+                                                    They contain dead virus, incapable of infecting people but still
+                                                    able to instruct the immune system to mount a defensive reaction
+                                                    against an infection.<br>
+                                                    It is a 2-dose vaccination regimen given 28 days apart.<br>
+                                                    It is a vaccine with no sub-zero storage, no reconstitution
+                                                    requirement, and ready to use liquid presentation in multi-dose
+                                                    vials, stable at 2-8&degC.<br>
+                                                    COVAXIN® has been granted approval for emergency restricted use in
+                                                    India by DCGI-CDSCO on Jan 03, 2021.<br>
+                                                    <a href='https://www.bharatbiotech.com/covaxin.html' target="_blank"
+                                                        rel="noopener noreferrer" class='btn btn-dark'>For More
+                                                        Information</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                                    <div class="text-center">
+                                        <h2 class='display-4 mainhead'>All Vaccines</h4>
+                                            <p class='lead subhead'>Here you can find all of the developing or approved
+                                                vaccines
+                                                in every phase.
+                                            </p>
+                                    </div>
+                                    <section class='p-2 subhead'>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Company</th>
+                                                    <th>Category</th>
+                                                    <th>Phase</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%data.forEach((el,ind)=>{%>
+                                                    <tr>
+                                                        <td>
+                                                            <%=ind+1%>
+                                                        </td>
+                                                        <td>
+
+                                                            <%=el.developerResearcher%>
+
+                                                        </td>
+                                                        <td>
+                                                            <%=el.category%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.phase%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.description%>
+                                                        </td>
+                                                    </tr>
+                                                    <%})%>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <div class="tab-pane fade" id="phase1" role="tabpanel">
+                                    <div class="text-center">
+                                        <h2 class='display-4 mainhead'>Phase-1</h2>
+                                        <p class='lead subhead pe-3'>Small groups of healthy adult volunteers receive
+                                            the
+                                            vaccine
+                                            to test for
+                                            safety.<br>The subject who receives the vaccine is observed until several
+                                            half-
+                                            lives of the vaccine have passed.<br>During this phase, the researchers
+                                            assess
+                                            the
+                                            safety (pharmacovigilance), tolerability, pharmacokinetics, and
+                                            pharmacodynamics
+                                            of a vaccine.<br>In addition, Phase I clinical trials normally include dose
+                                            -
+                                            ranging, also called dose escalation studies, <br>so that the best and
+                                            safest
+                                            dose
+                                            can be found and the safety window of the vaccine can be estimated.</p>
+                                    </div>
+                                    <section class='p-4 m-4 subhead'>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Company</th>
+                                                    <th>Category</th>
+                                                    <th>Phase</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%phase1.forEach((el,ind)=>{%>
+                                                    <tr>
+                                                        <td>
+                                                            <%=ind+1%>
+                                                        </td>
+                                                        <td>
+
+                                                            <%=el.developerResearcher%>
+
+                                                        </td>
+                                                        <td>
+                                                            <%=el.category%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.phase%>
+                                                        </td>
+                                                        <td>
+                                                            <%-el.description%>
+                                                        </td>
+                                                    </tr>
+                                                    <%})%>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <div class="tab-pane fade" id="phase2" role="tabpanel">
+                                    <div class="text-center">
+                                        <h2 class='display-4 mainhead'>Phase-2</h2>
+                                        <p class='lead subhead pe-3'>Vaccine is given to people who have characteristics
+                                            (such as
+                                            age and physical
+                                            health) similar to those for whom the new vaccine is intended.<br>In Phase
+                                            II
+                                            the
+                                            goal is to test whether the drug has any biological activity or
+                                            effect.<br>About
+                                            50-300 volunteers are assigned to participate.This phase includes 2
+                                            steps:<br>
+                                            first
+                                            determining clinical efficacy or biological activity('proof of concept'
+                                            studies)
+                                            and <br>second determine the optimal dose at which the drug shows biological
+                                            activity with minimal side- effects(‘definite dose - finding’ studies).
+                                        </p>
+                                    </div>
+                                    <section class='p-4 m-4 subhead'>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Company</th>
+                                                    <th>Category</th>
+                                                    <th>Phase</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%phase2.forEach((el,ind)=>{%>
+                                                    <tr>
+                                                        <td>
+                                                            <%=ind+1%>
+                                                        </td>
+                                                        <td>
+
+                                                            <%=el.developerResearcher%>
+
+                                                        </td>
+                                                        <td>
+                                                            <%=el.category%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.phase%>
+                                                        </td>
+                                                        <td>
+                                                            <%-el.description%>
+                                                        </td>
+                                                    </tr>
+                                                    <%})%>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <div class="tab-pane fade" id="phase3" role="tabpanel">
+                                    <div class="text-center">
+                                        <h2 class='display-4 mainhead'>Phase-3</h2>
+                                        <p class='lead subhead pe-3'>Vaccine is given to thousands of people and tested
+                                            for
+                                            efficacy and safety.<br>
+                                            Phase
+                                            III studies are randomized controlled multicenter trials during which,
+                                            the
+                                            vaccine is given to a number of 300-3000 healthy people to investigate
+                                            the
+                                            definite efficacy and effectiveness.<br> It is also called the
+                                            'pre-marketing
+                                            phase'
+                                            because it actually measures consumer response to the vaccine.</p>
+                                    </div>
+                                    <section class='p-4 m-4 subhead'>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Company</th>
+                                                    <th>Category</th>
+                                                    <th>Phase</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%phase3.forEach((el,ind)=>{%>
+                                                    <tr>
+                                                        <td>
+                                                            <%=ind+1%>
+                                                        </td>
+                                                        <td>
+
+                                                            <%=el.developerResearcher%>
+
+                                                        </td>
+                                                        <td>
+                                                            <%=el.category%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.phase%>
+                                                        </td>
+                                                        <td>
+                                                            <%-el.description%>
+                                                        </td>
+                                                    </tr>
+                                                    <%})%>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <div class="tab-pane fade" id="phase4" role="tabpanel">
+                                    <div class="text-center">
+                                        <h2 class='display-4 mainhead'>Phase-4</h2>
+                                        <p class='lead subhead pe-3'>This phase is also called post marketing
+                                            surveillance.<br>
+                                            Ongoing studies after
+                                            the
+                                            vaccine is approved and licensed, to monitor adverse events and to study
+                                            long-term effects of the vaccine in the population</p>
+                                    </div>
+                                    <section class='p-4 m-4 subhead'>
+                                        <table class="table table-hover table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Company</th>
+                                                    <th>Category</th>
+                                                    <th>Phase</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%phase4.forEach((el,ind)=>{%>
+                                                    <tr>
+                                                        <td>
+                                                            <%=ind+1%>
+                                                        </td>
+                                                        <td>
+
+                                                            <%=el.developerResearcher%>
+
+                                                        </td>
+                                                        <td>
+                                                            <%=el.category%>
+                                                        </td>
+                                                        <td>
+                                                            <%-el.phase%>
+                                                        </td>
+                                                        <td>
+                                                            <%=el.description%>
+                                                        </td>
+                                                    </tr>
+                                                    <%})%>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <%data.forEach((el,ind)=>{%>
+                                    <div class="tab-pane fade" id="no<%=ind%>" role="tabpanel">
+                                        <h1>
+                                            <%-el.developerResearcher%>
+                                        </h1>
+                                        <h2>
+                                            <%=el.category%>
+                                        </h2>
+                                        <h2>
+                                            <%=el.phase%>
+                                        </h2>
+                                        <p>
+                                            <%=el.description%>
+                                        </p>
+                                        <p>
+                                            <%=el.nextSteps%>
+                                        </p>
+                                        <div class="nav nav-pills">
+                                            <a href='/vaccine'>
+                                                Go back
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <%})%>
+                                        <%phase1.forEach((el,ind)=>{%>
+                                            <div class="tab-pane fade" id="p1<%=ind%>" role="tabpanel">
+                                                <h1>
+                                                    <%-el.developerResearcher%>
+                                                </h1>
+                                                <h2>
+                                                    <%=el.category%>
+                                                </h2>
+                                                <h2>
+                                                    <%=el.phase%>
+                                                </h2>
+                                                <p>
+                                                    <%=el.description%>
+                                                </p>
+                                                <p>
+                                                    <%=el.nextSteps%>
+                                                </p>
+                                                <div class="nav nav-pills">
+                                                    <a href='/vaccine'>
+                                                        Go back
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <%})%>
+                                                <%phase2.forEach((el,ind)=>{%>
+                                                    <div class="tab-pane fade" id="p2<%=ind%>" role="tabpanel">
+                                                        <h1>
+                                                            <%-el.developerResearcher%>
+                                                        </h1>
+                                                        <h2>
+                                                            <%=el.category%>
+                                                        </h2>
+                                                        <h2>
+                                                            <%=el.phase%>
+                                                        </h2>
+                                                        <p>
+                                                            <%=el.description%>
+                                                        </p>
+                                                        <p>
+                                                            <%=el.nextSteps%>
+                                                        </p>
+                                                        <div class="nav nav-pills">
+                                                            <a href='/vaccine'>
+                                                                Go back
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <%})%>
+                                                        <%phase3.forEach((el,ind)=>{%>
+                                                            <div class="tab-pane fade" id="p3<%=ind%>" role="tabpanel">
+                                                                <h1>
+                                                                    <%-el.developerResearcher%>
+                                                                </h1>
+                                                                <h2>
+                                                                    <%=el.category%>
+                                                                </h2>
+                                                                <h2>
+                                                                    <%=el.phase%>
+                                                                </h2>
+                                                                <p>
+                                                                    <%=el.description%>
+                                                                </p>
+                                                                <p>
+                                                                    <%=el.nextSteps%>
+                                                                </p>
+                                                                <div class="nav nav-pills">
+                                                                    <a href='/vaccine'>
+                                                                        Go back
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <%})%>
+                                                                <%phase4.forEach((el,ind)=>{%>
+                                                                    <div class="tab-pane fade" id="p4<%=ind%>"
+                                                                        role="tabpanel">
+                                                                        <h1>
+                                                                            <%-el.developerResearcher%>
+                                                                        </h1>
+                                                                        <h2>
+                                                                            <%=el.category%>
+                                                                        </h2>
+                                                                        <h2>
+                                                                            <%=el.phase%>
+                                                                        </h2>
+                                                                        <p>
+                                                                            <%=el.description%>
+                                                                        </p>
+                                                                        <p>
+                                                                            <%=el.nextSteps%>
+                                                                        </p>
+                                                                        <div class="nav nav-pills">
+                                                                            <a href='/vaccine'>
+                                                                                Go back
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <%})%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-dark text-center text-white mainhead">
+            <div class="container p-4">
+                <section class="mb-4">
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-google" href="https://www.google.com/"
+                        role="button" target="_blank" rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+                        href="https://www.instagram.com/__aravind.01__/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+                        href="https://www.linkedin.com/in/aravind-arul/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-facebook-f"
+                        href="https://www.facebook.com/aravind.arul.3" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                </section>
+
+                <section class="mb-4 row d-flex justify-content-center">
+                    <h3>CONTACT ME</h3>
+                    <p>
+                        Phone No: +971 507867720<br>
+                        Email ID: aravindarul18@gmail.com
+                    </p>
+                </section>
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright:
+                    <a class="text-white" href="#">CovidTracker</a>
+                </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

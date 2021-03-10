@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tracking</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css'>
+        <link rel='stylesheet' href='/stylesheets/tracking.css'>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap"
+            rel="stylesheet">
+        <script>
+            const stats = {send: <%-JSON.stringify(stats)%>} 
+            const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+        </script>
+    </head>
+
+    <body>
+        <div class="d-flex text-center text-white navigation mainhead">
+            <div class="cover-container d-flex w-100 mx-auto h-100 p-3 flex-column">
+                <header class="mb-auto heading">
+                    <div>
+                        <h3 class="float-md-left mb-0">Covid-19 Live-Tracker</h3>
+                        <nav class="nav nav-masthead justify-content-center float-md-right">
+                            <a class="nav-link" href="/home">Home</a>
+                            <a class="nav-link active" aria-current="page"" href=" #">Map Tracking</a>
+                            <a class="nav-link" href="/casetrack">Statistics</a>
+                            <a class="nav-link" href="/news">News</a>
+                            <a class="nav-link" href="/vaccine">Vaccine</a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div id='map'>
+            <div class='quakeInfo'>
+                <div class='info'><b>Province:</b> <span class='det' id='prov'></span></div>
+                <div class='info'><b>Country:</b> <span class='det' id='loc'></span></div>
+                <div class='info'><b>Total Cases:</b> <span class='det' id='tot'></span></div>
+                <div class='info'><b>Total Deaths:</b> <span class='det' id='death'></span></div>
+            </div>
+            <div id="legend" class="legend">
+                <h4><b>Total Cases</b></h4>
+                <div><span style="background-color: #ff0000"></span>&gt 2,000,000</div>
+                <div><span style="background-color: #ff3300"></span>2,000,000</div>
+                <div><span style="background-color: #ff6600"></span>1,000,000</div>
+                <div><span style="background-color: #ff9900"></span>500,000</div>
+                <div><span style="background-color: #ffcc00"></span>250,000</div>
+                <div><span style="background-color: #ffff00"></span>100,000</div>
+                <div><span style="background-color: #ccff00"></span>50,000</div>
+                <div><span style="background-color: #66ff00"></span>10,000</div>
+                <div><span style="background-color: #00ff00"></span>&lt 1000</div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-center text-white mainhead">
+            <div class="container p-4">
+                <section class="mb-4">
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-google" href="https://www.google.com/"
+                        role="button" target="_blank" rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+                        href="https://www.instagram.com/__aravind.01__/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+                        href="https://www.linkedin.com/in/aravind-arul/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-facebook-f"
+                        href="https://www.facebook.com/aravind.arul.3" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                </section>
+
+                <section class="mb-4 row d-flex justify-content-center">
+                    <h3>CONTACT ME</h3>
+                    <p>
+                        Phone No: +971 507867720<br>
+                        Email ID: aravindarul18@gmail.com
+                    </p>
+                </section>
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright:
+                    <a class="text-white" href="#">CovidTracker</a>
+                </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+            crossorigin="anonymous"></script>
+
+        <script src='/javascripts/map.js'></script>
+    </body>
+
+</html>

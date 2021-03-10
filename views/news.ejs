@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel='stylesheet' href='/stylesheets/news.css'>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="d-flex text-center text-white bgcol mainhead">
+            <div class="cover-container d-flex w-100 mx-auto h-100 p-3 flex-column">
+                <header class="mb-auto heading">
+                    <div>
+                        <h3 class="float-md-left mb-0">Covid-19 Live-Tracker</h3>
+                        <nav class="nav nav-masthead justify-content-center float-md-right">
+                            <a class="nav-link" href="/home">Home</a>
+                            <a class="nav-link" href="/maptrack">Map Tracking</a>
+                            <a class="nav-link" href="/casetrack">Statistics</a>
+                            <a class="nav-link active" aria-current="page" href="#">News</a>
+                            <a class="nav-link" href="/vaccine">Vaccine</a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class='my-5'>
+            <h1 class="display-3 text-center text-light mainhead">
+                Breaking News From the Past Week</h1>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                    <% news.articles.forEach((el,ind)=>{ %>
+                        <div class='col offset-md-1 col-md-5 mx-auto'>
+                            <div class="card mb-3 text-center h-100 cardb" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4 d-none d-md-flex align-items-center photo">
+                                        <% if (el.urlToImage){ %>
+                                            <img src=<%=el.urlToImage%>
+                                            class="card-img-top" height=150alt="About the
+                                            Article">
+                                            <%}%>
+                                                <% if (!el.urlToImage){ %>
+                                                    <img src='https://shahidafridifoundation.org/wp-content/uploads/2020/06/no-preview.jpg'
+                                                        class="card-img-top" alt="About the
+                                        Article">
+                                                    <%}%>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0 mainhead">
+                                                <p>
+                                                    <%=el.title%>
+                                                </p>
+                                                <footer class="blockquote-footer">
+                                                    <%=el.author%>
+                                                </footer>
+                                            </blockquote>
+                                            <div class="subhead">
+                                                <p>
+                                                    <%-el.description%>
+                                                </p>
+                                                <p class='card-text'> <a class='btn btn-dark butn' href=<%=el.url%>
+                                                        target="_blank" rel="noopener
+                                                        noreferrer">Read the full
+                                                        article</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                </div>
+            </div>
+        </section>
+
+        <nav>
+            <ul class="pagination justify-content-center">
+                <%for (let i=1;i<6;i++){%>
+                    <li class="page-item"><a <% if (i==page){ %>
+                            class="btn btn-light butn active"
+                            <%}%>
+                                <% if (i!=page) { %>
+                                    class="btn btn-light butn"
+                                    <%}%>
+                                        href="/news?p=<%=i%>"><%=i%>
+                        </a></li>
+                    <%}%>
+            </ul>
+        </nav>
+
+        <footer class="bg-dark text-center text-white mainhead">
+            <div class="container p-4">
+                <section class="mb-4">
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-google" href="https://www.google.com/"
+                        role="button" target="_blank" rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+                        href="https://www.instagram.com/__aravind.01__/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+                        href="https://www.linkedin.com/in/aravind-arul/" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+
+                    <a class="btn btn-outline-light btn-floating m-1 fa fa-facebook-f"
+                        href="https://www.facebook.com/aravind.arul.3" role="button" target="_blank"
+                        rel="noopener noreferrer"></a>
+                </section>
+
+                <section class="mb-4 row d-flex justify-content-center">
+                    <h3>CONTACT ME</h3>
+                    <p>
+                        Phone No: +971 507867720<br>
+                        Email ID: aravindarul18@gmail.com
+                    </p>
+                </section>
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright:
+                    <a class="text-white" href="#">CovidTracker</a>
+                </div>
+        </footer>
+    </body>
+
+</html>
