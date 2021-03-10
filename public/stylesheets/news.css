@@ -1,0 +1,105 @@
+body {
+    /*height: 100vh;*/
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.wallpapersafari.com/62/98/Qjf1kZ.png");
+    background-size: contain;
+    background-position: top;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.cover-container {
+    max-width: 60vw;
+  }
+  
+  .nav-link {
+      padding: 0.25rem 0;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      margin-left: 1rem;
+      border-bottom: 0.25rem solid transparent;
+  }
+  
+  .nav-link:hover{
+      color: rgba(255,255,255,0.5);
+      border-bottom-color:rgba(255,255,255,0.5);
+  }
+  
+  .nav-link.active {
+      color: white;
+      border-bottom-color:white;
+  
+  }
+  
+  .btn-secondary, .btn-secondary:hover{
+      color: #333;
+      text-shadow: none;
+  }
+  
+  .tracking:hover{
+      color: #006ada;
+  }
+  
+  .cardb{
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      border-radius: 10%;
+  }
+
+  .mainhead{
+    font-family: Playfair Display, serif;
+}
+
+.subhead{
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.butn{
+    background-color: #ef6c00;
+}
+
+body::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: black;
+      border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar
+  {
+      
+      width: 10px;
+      background-color: black;
+  }
+  
+  body::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+      background-color: #ef6c00;
+      border: 2px solid #ef6c00;
+  }
+
+  .photo{}
+
+  @media (max-width: 500px){
+    .cover-container{
+      max-width: 100vw;
+    }
+    
+    .heading div nav a{
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 705px){
+    .cover-container{
+        max-width: 100vw;
+      }
+    .heading div nav a{
+      font-size: 14px;
+    }
+  }
